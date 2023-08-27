@@ -40,8 +40,8 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags:
           $(tag)
-          - task: AzureWebAppContainer@1
-            inputs:
-              azureSubscription: 'Visual Studio Enterprise Subscription(1)(dc6bcfa4-7db8-4f95-afaa-49236377382c)'
-              appName: 'nedumappservice'
-              containers: 'chinedumeze.azurecr.io/javascriptimage:$(Build.BuildId)'
+    - task: AzureWebAppContainer@1
+      inputs:
+        azureSubscription: 'Visual Studio Enterprise Subscription(1)(dc6bcfa4-7db8-4f95-afaa-49236377382c)'
+        appName: 'nedumappservice'
+        containers: 'chinedumeze.azurecr.io/javascriptimage:$(Build.BuildId)'
