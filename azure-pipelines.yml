@@ -14,7 +14,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '02c2c294-a6bd-4f2c-8919-89f2b5738b15'
-  imageRepository: 'javascriptImage'
+  imageRepository: 'javascriptimage'
   containerRegistry: 'chinedumeze.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/app/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -44,6 +44,6 @@ stages:
       inputs:
               azureSubscription: 'Visual Studio Enterprise Subscription(dc6bcfa4-7db8-4f95-afaa-49236377382c)'
               appName: 'nedumAppService'
-              containers: 'chinedumeze.azurecr.io/javascriptImage:$(Build.BuildId)'
+              containers: 'chinedumeze.azurecr.io/javascriptimage:$(Build.BuildId)'
        
 
