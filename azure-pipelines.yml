@@ -13,7 +13,7 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '02c2c294-a6bd-4f2c-8919-89f2b5738b15'
+  dockerRegistryServiceConnection: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
   imageRepository: 'javascriptimage'
   containerRegistry: 'chinedumeze.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/app/Dockerfile'
@@ -42,6 +42,6 @@ stages:
           $(tag)
     - task: AzureWebAppContainer@1
       inputs:
-        azureSubscription: 'Visual Studio Enterprise Subscription(4)(dc6bcfa4-7db8-4f95-afaa-49236377382c)'
+        azureSubscription: 'Visual Studio Enterprise Subscription(4)(XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX)'
         appName: 'nedumappservice'
         containers: 'chinedumeze.azurecr.io/javascriptimage:$(Build.BuildId)'
