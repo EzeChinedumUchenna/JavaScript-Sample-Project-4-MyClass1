@@ -1,4 +1,4 @@
-# Sample Docker and Kubernetes Node.JS app.
+# Sample Docker and Node.JS app.
 
 This code sample uses the Node.js web framework Express to create a basic web server that listens for HTTP requests on port 8080.
 
